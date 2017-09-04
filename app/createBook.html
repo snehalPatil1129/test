@@ -1,0 +1,67 @@
+<div class="container">
+            <form class="form-horizontal" name="form" role="form">
+                <h2>Create a New Book</h2>
+                <div class="form-group">
+                    <label for="bookTitle" class="col-sm-3 control-label">Book Title</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="bookTitle" data-ng-model="bdk.title" placeholder="Title"
+                         class="form-control" autofocus required>      
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="year" class="col-sm-3 control-label">Year</label>
+                    <div class="col-sm-9">
+                        <input type="number" id="year" data-ng-model="bdk.year" placeholder="Year"
+                         class="form-control" required>
+                    </div>
+                </div>
+               
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Favorite</label>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" id="yesRadio" data-ng-model="bdk.favorite" 
+                                    value="true">Yes
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" id="NoRadio" data-ng-model="bdk.favorite" value="false">No
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div> <!-- /.form-group -->
+                
+                
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button type="submit" class="btn btn-primary btn-block" id='savebutton' value="Save" data-ng-click="add(bdk)"
+                         data-ng-disabled="form.user.$dirty && form.user.$invalid ||
+        form.bdk.title.$dirty && form.bdk.title.$invalid">Create</button>
+                    </div>
+                </div>
+            </form> <!-- /form -->
+        </div> <!-- ./container -->
+
+        <style>body {
+    background-color: #eee;
+}
+
+*[role="form"] {
+    max-width: 530px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0.3em;
+}
+
+*[role="form"] h2 {
+    margin-left: 5em;
+    margin-bottom: 1em;
+}
+</style>

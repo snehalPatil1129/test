@@ -1,0 +1,23 @@
+<table class="table1">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Book Title</th>
+      <th>Year</th>
+      <th>Favorite</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id='member' ng-repeat="bdk in data">
+      <th scope="row">{{bdk.id}}</th>
+      <td>{{bdk.title}}</a></td>
+      <td>{{bdk.year}}</td>
+      <td>{{bdk.favorite}}</td>
+      <th><a href="#/editBook/{{bdk.id}}" data-ng-click="edit(bdk.id)" >Edit</a></th>
+      <th><a href="#deleteBook"data-ng-click="delete(bdk.id)">Delete</a></td>
+      </th>
+    </tr>
+  </tbody>
+</table>

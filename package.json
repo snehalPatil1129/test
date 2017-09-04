@@ -1,0 +1,25 @@
+{
+  "name": "angular-basic",
+  "version": "1.0.0",
+  "description": "basic",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp connect",
+    "test": "karma start"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect-multi": "^1.0.8",
+    "jasmine-reporters": "^2.0.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-mock": "^1.0.0",
+    "angularjs": "0.0.1"
+  }
+}
