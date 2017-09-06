@@ -3,9 +3,9 @@ angular.module("bookApp").controller('editController' ,function ($scope ,$http,C
     $scope.edit=function(id)
     {     
         CRUDService.getSingleBook(id)
-        .success(function (responce)
+        .then(function (response)
         {               
-                $scope.bdk=responce;                  
+                $scope.bdk=response;                  
         });
     };
     
@@ -14,15 +14,11 @@ angular.module("bookApp").controller('editController' ,function ($scope ,$http,C
     $scope.save=function(bdk)
     {   
         CRUDService.updateBook($scope.bdk)
-        .success(function (data) 
-        {
-            //alert("Updated successfully!!");            
-            $location.path('/showbooks');          
-        })
-        .error(function (data)
-        {
-            $scope.error = "An Error has occured while updating! " + data;                
+        .then(function (data) 
+        {         
+            $scope.bookArray=data;      
         });
+        $location.path('/showbooks');  
 
     };
    

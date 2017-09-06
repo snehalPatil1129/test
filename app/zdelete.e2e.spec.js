@@ -10,7 +10,7 @@
 
          expect(element.all(by.repeater('bdk in data')).count()).toBe(5);
         
-         var names = $$('.table1  .title').getText();
+         var names = $$('.table .title').getText();
          expect(names).not.toContain('monu');
        
                 

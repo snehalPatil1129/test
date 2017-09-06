@@ -12,7 +12,7 @@
             $scope.delete=function(id)
             {
                 CRUDService.deleteBook(id) 
-                  .success(function (data)
+                  .then(function (data)
                     {
                         
                          $location.path('/');         

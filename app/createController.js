@@ -1,15 +1,24 @@
 angular.module("bookApp").controller("createController",function($scope,$http,CRUDService,$location){
   $scope.add=function(bdk){
-    CRUDService.addBook($scope.bdk, $scope.successFunction, $scope.failureFunction) 
-    .success(function(data)
-                {
-                 $scope.bookArray=data;
-                    $location.path('/showbooks');      
-               })
-                   .error(function(data){
-                  $scope.error = "An error has occured while adding! " + data;  
-                });
-              };  
+    CRUDService.addBook($scope.bdk).then(function(data){
+      $scope.bookArray=data;
+    });
+    $location.path('/showbooks'); 
+  }  
+    
+  
+});
+
+
+// .success(function(data)
+    //             {
+    //              $scope.bookArray=data;
+    //                 $location.path('/showbooks');      
+    //            })
+    //                .error(function(data){
+    //               $scope.error = "An error has occured while adding! " + data;  
+    //             });
+    //           };  
     // $scope.successFunction();
     // $scope.failureFunction();
  
@@ -20,11 +29,6 @@ angular.module("bookApp").controller("createController",function($scope,$http,CR
     // $scope.failureFunction = function(data){
     //   $scope.error = "An error has occured while adding! " + data;  
     // }
-  
-});
-
-
-
 
 
 

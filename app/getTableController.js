@@ -3,8 +3,8 @@
 angular.module("bookApp").controller('getTableController' ,function ($scope ,$http,CRUDService,$routeParams,$location) { 
  
     CRUDService.getTab()
-    .then(function(response){
-      $scope.bookArray=response.data;
+    .then(function(book){
+      $scope.bookArray=book;
     })
  
 });
